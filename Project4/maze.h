@@ -163,11 +163,12 @@ maze::ostream& operator<<(ostream& ostr, const Graph& g)
     for (Graph::vertex_iterator vItr = vItrRange.first; vItr != vItrRange.second; ++vItr) {
         print(g[v].visited);
         print(g.[v].weight);
+        print(g.[v].marked);
     }
     // Loop over all edges in the graph 
     for (Graph::edge_iterator eItr = eItrRange.first; eItr != eItrRange.second; ++eItr) {
         print(g[e].visited); //prints the vistited property
-        print(vertex_descriptor target(Graph::edge_descriptor e, Graph & g)); //Prints the target vertex of edge e. 
-        print(vertex_descriptor source(Graph::edge_descriptor e, Graph & g)); //Prints the source vertex of edge e.
+        print(g[e].weight);
+        print(g[e].marked);
     }
 }
